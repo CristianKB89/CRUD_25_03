@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <table>
+      <thead>
+        <th>Nombre</th>
+        <th>Edad</th>
+      </thead>
+      <tbody>
+        <% usuarios.map((i, index) => { %> 
+          <tr class=" <%= index % 2 === 0 ? 'par' : 'impar' %>  ">
+            <td><%=i.nombre%></td>
+            <td><%=i.edad%></td>
+          </tr>
+        <% }) %>  
+      </tbody>
+    </table>
+  </body>
+</html>
